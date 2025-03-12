@@ -1,0 +1,13 @@
+@font-face {
+	font-family: 'Asap';
+	src: url('../assets/fonts/Asap-VariableFont.woff2') format('woff2');
+	font-weight: 100 900;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Jura';
+	src: url('../assets/fonts/Jura-VariableFont.woff2') format('woff2');
+	font-weight: 100 900;
+	font-style: normal;
+}
