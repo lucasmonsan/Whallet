@@ -1,8 +1,18 @@
 <script lang="ts">
 	import Card from './Card.svelte';
+	import CardDetails from './CardDetails.svelte';
 
-	export let cards: Array<{ title: string; description: string; imageUrl: string }>;
+	export let cards: Array<{
+		id: string;
+		title: string;
+		description: string;
+		imageUrl: string;
+		details: Array<{ label: string; value: string }>;
+	}>;
+
 	let activeIndex = 0;
+	let touchStartX: number | null = null;
+	let touchEndX: number | null = null;
 
 	function nextCard() {
 		if (activeIndex < cards.length - 1) {
@@ -15,65 +25,57 @@
 			activeIndex -= 1;
 		}
 	}
+
+	function handleTouchStart(event: TouchEvent) {
+		touchStartX = event.touches[0].clientX;
+	}
+
+	function handleTouchMove(event: TouchEvent) {
+		touchEndX = event.touches[0].clientX;
+	}
+
+	function handleTouchEnd() {
+		if (touchStartX !== null && touchEndX !== null) {
+			const deltaX = touchEndX - touchStartX;
+
+			if (deltaX > 50) {
+				// Swipe para a direita (anterior)
+				prevCard();
+			} else if (deltaX < -50) {
+				// Swipe para a esquerda (próximo)
+				nextCard();
+			}
+		}
+
+		// Resetar os valores
+		touchStartX = null;
+		touchEndX = null;
+	}
 </script>
 
-<div class="carousel">
+<div class="carousel" on:touchstart={handleTouchStart} on:touchmove={handleTouchMove} on:touchend={handleTouchEnd}>
 	{#each cards as card, index}
-		<Card
-			{...card}
-			isActive={index === activeIndex}
-			style={`
-        transform: translateX(calc(${index - activeIndex} * (100% + var(--gap))));
-        opacity: ${index === activeIndex ? 1 : 0.5};
-        z-index: ${index === activeIndex ? 1 : 0};
-      `}
-		/>
+		<Card {...card} isActive={index === activeIndex} transform={`translateX(calc(${index - activeIndex} * (100% + var(--gap))))`} opacity={index === activeIndex ? 1 : 0.5} zIndex={index === activeIndex ? 1 : 0} />
 	{/each}
 </div>
 
-<div class="controls">
-	<button on:click={prevCard} disabled={activeIndex === 0}>Anterior</button>
-	<button on:click={nextCard} disabled={activeIndex === cards.length - 1}>Próximo</button>
-</div>
+<CardDetails details={cards[activeIndex].details} />
 
 <style>
 	:root {
-		--gap: 1rem; /* Espaço entre os cards */
+		--gap: 0.5rem; /* Espaço entre os cards */
 	}
 
 	.carousel {
 		display: flex;
-		align-items: center;
+		align-items: flex-start;
 		justify-content: center;
-		height: 80%;
+		width: 100%;
+		height: 100%;
+		max-height: 11rem;
+		padding: var(--xxs) 0;
 		position: relative;
 		overflow: hidden;
-	}
-
-	.controls {
-		display: flex;
-		justify-content: center;
-		gap: var(--md);
-		margin-top: var(--md);
-	}
-
-	button {
-		padding: var(--sm) var(--md);
-		background-color: var(--color-primary);
-		color: var(--color-light);
-		border: none;
-		border-radius: var(--border-radius-md);
-		cursor: pointer;
-		transition: background-color 0.3s var(--transition-timing);
-	}
-
-	button:hover:not(:disabled) {
-		background-color: var(--color-secondary);
-	}
-
-	button:disabled {
-		background-color: var(--color-light);
-		color: var(--color-secondary);
-		cursor: not-allowed;
+		touch-action: pan-y; /* Permite apenas gestos verticais */
 	}
 </style>

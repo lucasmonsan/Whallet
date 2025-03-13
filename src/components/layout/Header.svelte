@@ -9,6 +9,6 @@
 		top: 0;
 		width: 100%;
 		height: 4rem;
-		background-color: cyan;
+		border: solid 2px cyan;
 	}
 </style>

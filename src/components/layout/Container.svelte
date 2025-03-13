@@ -14,9 +14,14 @@
 
 <style>
 	main {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: flex-start;
+		width: 100%;
 		height: 100dvh;
-		padding: 4.25rem 0;
-		border: solid 1px red;
+		padding: 4rem 0;
+		background-color: rgba(16, 112, 53, 0.695);
 	}
 
 	section {

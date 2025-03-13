@@ -3,10 +3,12 @@
 	export let description: string;
 	export let imageUrl: string;
 	export let isActive: boolean = false;
-	export let style: string = '';
+	export let transform: string;
+	export let opacity: number;
+	export let zIndex: number;
 </script>
 
-<div class="card" class:active={isActive} {style}>
+<div class="card" class:active={isActive} style={`transform: ${transform}; opacity: ${opacity}; z-index: ${zIndex};`}>
 	<img src={imageUrl} alt={title} class="card-image" />
 	<h2 class="card-title">{title}</h2>
 	<p class="card-description">{description}</p>
@@ -14,8 +16,10 @@
 
 <style>
 	.card {
-		width: 80%;
+		width: 90%;
 		max-width: 600px;
+		height: 10rem;
+		padding: var(--sm);
 		border-radius: var(--border-radius-md);
 		box-shadow: var(--shadow-md);
 		overflow: hidden;
@@ -23,8 +27,8 @@
 			transform 0.5s ease,
 			opacity 0.5s ease;
 		opacity: 0.5;
-		transform: scale(0.9);
 		position: absolute;
+		background-color: whitesmoke;
 	}
 
 	.card.active {

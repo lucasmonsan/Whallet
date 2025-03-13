@@ -9,6 +9,7 @@
 		bottom: 0;
 		width: 100%;
 		height: 4rem;
-		background-color: pink;
+		border: solid 2px pink;
+		opacity: 0.5;
 	}
 </style>
