@@ -1,0 +1,41 @@
+:root {
+	/* Base responsiva */
+	--base: clamp(1rem, 1vw + 0.5rem, 2rem);
+
+	/* Cores */
+	--color-primary: #007bff;
+	--color-secondary: #6c757d;
+	--color-success: #28a745;
+	--color-danger: #dc3545;
+	--color-light: #f8f9fa;
+	--color-dark: #343a40;
+
+	/* Cores de texto e fundo */
+	--text-color: var(--color-dark);
+	--background-color: var(--color-light);
+
+	/* Bordas */
+	--border-radius-sm: 0.25rem;
+	--border-radius-md: 0.5rem;
+	--border-radius-lg: 0.75rem;
+
+	/* Sombras */
+	--shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+	--shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+	--shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+
+	/* Transições */
+	--transition-duration: 0.3s;
+	--transition-timing: ease-in-out;
+
+	/* Espaçamentos baseados em --base */
+	--xxxs: calc(var(--base) * 0.25); /* Muito pequeno */
+	--xxs: calc(var(--base) * 0.5); /* Extra pequeno */
+	--xs: calc(var(--base) * 0.7); /* Pequeno */
+	--sm: calc(var(--base) * 0.85); /* Médio-pequeno */
+	--md: var(--base); /* Médio (base) */
+	--lg: calc(var(--base) * 1.25); /* Médio-grande */
+	--xl: calc(var(--base) * 1.5); /* Grande */
+	--xxl: calc(var(--base) * 1.75); /* Extra grande */
+	--xxxl: calc(var(--base) * 2); /* Muito grande */
+}
