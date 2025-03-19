@@ -5,8 +5,9 @@
 	export let cards: Array<{
 		id: string;
 		title: string;
-		description: string;
+		type: string;
 		imageUrl: string;
+		color: string;
 		details: Array<{ label: string; value: string }>;
 	}>;
 
@@ -15,15 +16,11 @@
 	let touchEndX: number | null = null;
 
 	function nextCard() {
-		if (activeIndex < cards.length - 1) {
-			activeIndex += 1;
-		}
+		activeIndex = Math.min(activeIndex + 1, cards.length - 1);
 	}
 
 	function prevCard() {
-		if (activeIndex > 0) {
-			activeIndex -= 1;
-		}
+		activeIndex = Math.max(activeIndex - 1, 0);
 	}
 
 	function handleTouchStart(event: TouchEvent) {
@@ -34,20 +31,19 @@
 		touchEndX = event.touches[0].clientX;
 	}
 
+	let isSwiping = false;
+
 	function handleTouchEnd() {
-		if (touchStartX !== null && touchEndX !== null) {
+		if (touchStartX !== null && touchEndX !== null && !isSwiping) {
 			const deltaX = touchEndX - touchStartX;
 
-			if (deltaX > 50) {
-				// Swipe para a direita (anterior)
-				prevCard();
-			} else if (deltaX < -50) {
-				// Swipe para a esquerda (próximo)
-				nextCard();
-			}
+			if (deltaX > 50) prevCard();
+			else if (deltaX < -50) nextCard();
+
+			isSwiping = true;
+			setTimeout(() => (isSwiping = false), 300); // Evita múltiplos swipes rápidos
 		}
 
-		// Resetar os valores
 		touchStartX = null;
 		touchEndX = null;
 	}
@@ -72,7 +68,7 @@
 		justify-content: center;
 		width: 100%;
 		height: 100%;
-		max-height: 11rem;
+		max-height: 6.25rem;
 		padding: var(--xxs) 0;
 		position: relative;
 		overflow: hidden;

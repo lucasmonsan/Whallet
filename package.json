@@ -23,5 +23,8 @@
 		"format": "prettier --write .",
 		"lint": "prettier --check ."
 	},
-	"type": "module"
+	"type": "module",
+	"dependencies": {
+		"dexie": "^4.0.11"
+	}
 }

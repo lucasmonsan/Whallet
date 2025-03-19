@@ -8,11 +8,20 @@
 	--color-success: #28a745;
 	--color-danger: #dc3545;
 	--color-light: #f8f9fa;
-	--color-dark: #343a40;
+	--color-gray: #262228;
+	--color-dark: #141316;
+
+	--color-red: #ff595e;
+	--color-orange: #ff924c;
+	--color-yellow: #ffca3a;
+	--color-green: #8ac926;
+	--color-blue: #1982c4;
+	--color-purple: #6a4c93;
+	--color-brown: #7f5539;
 
 	/* Cores de texto e fundo */
-	--text-color: var(--color-dark);
-	--background-color: var(--color-light);
+	--text-color: var(--color-light);
+	--background-color: var(--color-dark);
 
 	/* Bordas */
 	--border-radius-sm: 0.25rem;

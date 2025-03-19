@@ -6,78 +6,87 @@
 	const cards = [
 		{
 			id: '1',
-			title: 'Card 1',
-			description: 'Descrição do Card 1',
+			title: 'Carteira',
+			type: 'debit',
 			imageUrl: teste,
+			color: 'brown',
+			creditValue: 'R$0,00',
+			debitValue: 'R$100,00',
 			details: [
-				{ label: 'Informação 1', value: 'Valor 1' },
-				{ label: 'Informação 2', value: 'Valor 2' },
-				{ label: 'Informação 3', value: 'Valor 3' },
-				{ label: 'Informação 1', value: 'Valor 1' },
-				{ label: 'Informação 2', value: 'Valor 2' },
-				{ label: 'Informação 3', value: 'Valor 3' },
-				{ label: 'Informação 1', value: 'Valor 1' },
-				{ label: 'Informação 2', value: 'Valor 2' },
-				{ label: 'Informação 3', value: 'Valor 3' },
-				{ label: 'Informação 1', value: 'Valor 1' },
-				{ label: 'Informação 2', value: 'Valor 2' },
-				{ label: 'Informação 3', value: 'Valor 3' }
+				{ label: 'Informação 1', value: 'Valor 1', date: '01/01/2023', type: 'Tipo A', amount: 'R$100,00' },
+				{ label: 'Informação 2', value: 'Valor 2', date: '02/02/2023', type: 'Tipo B', amount: 'R$200,00' },
+				{ label: 'Informação 1', value: 'Valor 1', date: '01/01/2023', type: 'Tipo A', amount: 'R$100,00' },
+				{ label: 'Informação 2', value: 'Valor 2', date: '02/02/2023', type: 'Tipo B', amount: 'R$200,00' },
+				{ label: 'Informação 1', value: 'Valor 1', date: '01/01/2023', type: 'Tipo A', amount: 'R$100,00' },
+				{ label: 'Informação 2', value: 'Valor 2', date: '02/02/2023', type: 'Tipo B', amount: 'R$200,00' }
 			]
 		},
 		{
 			id: '2',
-			title: 'Card 2',
-			description: 'Descrição do Card 2',
+			title: 'Nubank',
+			type: 'both',
 			imageUrl: teste,
+			color: 'purple',
+			creditValue: 'R$0,00',
+			debitValue: 'R$100,00',
 			details: [
-				{ label: 'Informação A', value: 'Valor A' },
-				{ label: 'Informação B', value: 'Valor B' }
+				{ label: 'Informação 1', value: 'Valor 1', date: '01/01/2023', type: 'Tipo A', amount: 'R$100,00' },
+				{ label: 'Informação 2', value: 'Valor 2', date: '02/02/2023', type: 'Tipo B', amount: 'R$200,00' },
+				{ label: 'Informação 1', value: 'Valor 1', date: '01/01/2023', type: 'Tipo A', amount: 'R$100,00' },
+				{ label: 'Informação 2', value: 'Valor 2', date: '02/02/2023', type: 'Tipo B', amount: 'R$200,00' },
+				{ label: 'Informação 1', value: 'Valor 1', date: '01/01/2023', type: 'Tipo A', amount: 'R$100,00' },
+				{ label: 'Informação 2', value: 'Valor 2', date: '02/02/2023', type: 'Tipo B', amount: 'R$200,00' },
+				{ label: 'Informação 1', value: 'Valor 1', date: '01/01/2023', type: 'Tipo A', amount: 'R$100,00' },
+				{ label: 'Informação 2', value: 'Valor 2', date: '02/02/2023', type: 'Tipo B', amount: 'R$200,00' },
+				{ label: 'Informação 1', value: 'Valor 1', date: '01/01/2023', type: 'Tipo A', amount: 'R$100,00' },
+				{ label: 'Informação 2', value: 'Valor 2', date: '02/02/2023', type: 'Tipo B', amount: 'R$200,00' },
+				{ label: 'Informação 1', value: 'Valor 1', date: '01/01/2023', type: 'Tipo A', amount: 'R$100,00' },
+				{ label: 'Informação 2', value: 'Valor 2', date: '02/02/2023', type: 'Tipo B', amount: 'R$200,00' }
 			]
 		},
 		{
 			id: '3',
-			title: 'Card 3',
-			description: 'Descrição do Card 3',
+			title: 'Caixa Econômica Federal',
+			type: 'credit',
 			imageUrl: teste,
+			color: 'blue',
+			creditValue: 'R$0,00',
+			debitValue: 'R$100,00',
 			details: [
-				{ label: 'Informação X', value: 'Valor X' },
-				{ label: 'Informação Y', value: 'Valor Y' },
-				{ label: 'Informação Z', value: 'Valor Z' },
-				{ label: 'Informação W', value: 'Valor W' }
+				{ label: 'Informação 1', value: 'Valor 1', date: '01/01/2023', type: 'Tipo A', amount: 'R$100,00' },
+				{ label: 'Informação 2', value: 'Valor 2', date: '02/02/2023', type: 'Tipo B', amount: 'R$200,00' }
 			]
 		},
 		{
 			id: '4',
-			title: 'Card 4',
-			description: 'Descrição do Card 4',
+			title: 'Inter',
+			type: 'credit',
 			imageUrl: teste,
+			color: 'yellow ',
+			creditValue: 'R$0,00',
+			debitValue: 'R$100,00',
 			details: [
-				{ label: 'Detalhe 1', value: 'Dado 1' },
-				{ label: 'Detalhe 2', value: 'Dado 2' },
-				{ label: 'Detalhe 3', value: 'Dado 3' },
-				{ label: 'Detalhe 4', value: 'Dado 4' },
-				{ label: 'Detalhe 5', value: 'Dado 5' }
+				{ label: 'Informação 1', value: 'Valor 1', date: '01/01/2023', type: 'Tipo A', amount: 'R$100,00' },
+				{ label: 'Informação 2', value: 'Valor 2', date: '02/02/2023', type: 'Tipo B', amount: 'R$200,00' },
+				{ label: 'Informação 1', value: 'Valor 1', date: '01/01/2023', type: 'Tipo A', amount: 'R$100,00' },
+				{ label: 'Informação 2', value: 'Valor 2', date: '02/02/2023', type: 'Tipo B', amount: 'R$200,00' }
 			]
 		},
 		{
 			id: '5',
-			title: 'Card 5',
-			description: 'Descrição do Card 5',
+			title: 'Itaú',
+			type: 'debit',
 			imageUrl: teste,
+			color: 'orange',
+			creditValue: 'R$0,00',
+			debitValue: 'R$100,00',
 			details: [
-				{ label: 'Item 1', value: 'Info 1' },
-				{ label: 'Item 2', value: 'Info 2' }
-			]
-		},
-		{
-			id: '6',
-			title: 'Card 6',
-			description: 'Descrição do Card 6',
-			imageUrl: teste,
-			details: [
-				{ label: 'Dado A', value: 'Valor A' },
-				{ label: 'Dado B', value: 'Valor B' },
-				{ label: 'Dado C', value: 'Valor C' }
+				{ label: 'Informação 1', value: 'Valor 1', date: '01/01/2023', type: 'Tipo A', amount: 'R$100,00' },
+				{ label: 'Informação 2', value: 'Valor 2', date: '02/02/2023', type: 'Tipo B', amount: 'R$200,00' },
+				{ label: 'Informação 1', value: 'Valor 1', date: '01/01/2023', type: 'Tipo A', amount: 'R$100,00' },
+				{ label: 'Informação 2', value: 'Valor 2', date: '02/02/2023', type: 'Tipo B', amount: 'R$200,00' },
+				{ label: 'Informação 1', value: 'Valor 1', date: '01/01/2023', type: 'Tipo A', amount: 'R$100,00' },
+				{ label: 'Informação 2', value: 'Valor 2', date: '02/02/2023', type: 'Tipo B', amount: 'R$200,00' }
 			]
 		}
 	];
