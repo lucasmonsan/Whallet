@@ -1,9 +1,6 @@
-<script>
-	import Footer from '../components/layout/Footer.svelte';
-	import Header from '../components/layout/Header.svelte';
-	import '../styles/global.css';
+<script lang="ts">
+	import '../app.css';
+	let { children } = $props();
 </script>
 
-<Header />
-<slot />
-<Footer />
+{@render children()}
