@@ -1,0 +1,20 @@
+body {
+	font-family: 'Asap', sans-serif;
+	color: var(--text-color);
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	gap: var(--sm);
+	min-height: 100dvh;
+	padding: var(--md);
+	border: solid 2px red;
+}
+
+section {
+	min-height: calc(var(--md) * 3);
+	padding: calc(var(--md) * 0.25) var(--sm);
+	border-radius: var(--radius);
+	border: solid 2px green;
+}

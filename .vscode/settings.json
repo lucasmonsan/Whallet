@@ -43,6 +43,7 @@
 	"files.associations": {
 		"*.tsx": "typescriptreact"
 	},
+
 	"[svelte]": {
 		"editor.defaultFormatter": "svelte.svelte-vscode"
 	},
