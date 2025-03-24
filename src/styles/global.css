@@ -1,6 +1,8 @@
 @import '../styles/variables.css';
+@import '../styles/themes.css';
 @import '../styles/texts.css';
 @import '../styles/containers.css';
+@import '../styles/forms.css';
 
 img {
 	height: 100%;

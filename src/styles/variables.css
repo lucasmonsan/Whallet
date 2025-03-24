@@ -7,5 +7,11 @@
 	--lg: calc(var(--base) * 1.25);
 	--xl: calc(var(--base) * 1.5);
 
-	--radius: var(--sm);
+	--black: rgb(29, 30, 34);
+	--white: rgb(255, 255, 255);
+	--gray: rgb(47, 49, 55);
+
+	--radius: var(--md);
+
+	--padding-container: calc(var(--md) * 0.25) var(--sm);
 }

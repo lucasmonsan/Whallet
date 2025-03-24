@@ -1,0 +1,8 @@
+/* DEFAULT */
+:root {
+	--color-bg1: var(--black);
+	--color-bg2: var(--gray);
+
+	--color-text1: var(--white);
+	--color-text2: ;
+}

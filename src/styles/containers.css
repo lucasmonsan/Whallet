@@ -1,6 +1,7 @@
 body {
 	font-family: 'Asap', sans-serif;
-	color: var(--text-color);
+	color: var(--color-text1);
+	background-color: var(--color-bg1);
 }
 
 main {
@@ -14,7 +15,8 @@ main {
 
 section {
 	min-height: calc(var(--md) * 3);
-	padding: calc(var(--md) * 0.25) var(--sm);
+	padding: var(--padding-container);
 	border-radius: var(--radius);
-	border: solid 2px green;
+	border: none;
+	background-color: var(--color-bg2);
 }

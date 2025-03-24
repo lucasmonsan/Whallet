@@ -1,4 +1,6 @@
-<script></script>
+<script>
+	import Checkbox from '../components/layouts/Checkbox.svelte';
+</script>
 
 <main>
 	<h1>h1 - Welcome to SvelteKit</h1>
@@ -14,11 +16,16 @@
 
 	<section>section</section>
 
-	<input type="text" />
+	<input type="text" placeholder="input text" />
 
 	<label for="">
 		<input type="checkbox" name="" id="" />
+		<input type="checkbox" name="" id="" />
+		<input type="checkbox" name="" id="" />
+		<input type="checkbox" name="" id="" />
 	</label>
+
+	<Checkbox />
 
 	<label for="">
 		<input type="date" name="" id="" />
@@ -29,7 +36,10 @@
 	</label>
 
 	<label for="">
-		<input type="radio" name="" id="" />
+		<input type="radio" name="radio" id="" />
+		<input type="radio" name="radio" id="" />
+		<input type="radio" name="radio" id="" />
+		<input type="radio" name="radio" id="" />
 	</label>
 
 	<select name="" id="">
