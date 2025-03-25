@@ -1,17 +1,27 @@
 :root {
 	--base: clamp(1rem, 1vw + 0.5rem, 2rem);
 
+	--xxs: calc(var(--base) * 0.25);
 	--xs: calc(var(--base) * 0.5);
 	--sm: calc(var(--base) * 0.75);
 	--md: var(--base);
 	--lg: calc(var(--base) * 1.25);
 	--xl: calc(var(--base) * 1.5);
+	--xxl: calc(var(--base) * 1.75);
 
-	--black: rgb(29, 30, 34);
+	--black: rgb(23, 23, 23);
+	--graphite: rgb(16, 16, 16);
 	--white: rgb(255, 255, 255);
-	--gray: rgb(47, 49, 55);
+	--snow: rgb(245, 245, 245);
+	--gray: rgb(221, 221, 221);
+	--blue: blue;
+	--red: rgb(231, 78, 136);
+	--green: rgb(112, 207, 171);
 
-	--radius: var(--md);
+	--padding-container: var(--md);
+	--padding-input: calc(var(--md) * 0.25) var(--xs);
 
-	--padding-container: calc(var(--md) * 0.25) var(--sm);
+	--border: solid 2px;
+
+	--radius: var(--xxs);
 }

@@ -1,5 +1,7 @@
 <script>
 	import Checkbox from '../components/layouts/Checkbox.svelte';
+	import Date from '../components/layouts/Date.svelte';
+	import Input from '../components/layouts/Input.svelte';
 </script>
 
 <main>
@@ -14,42 +16,53 @@
 
 	<p>p - Welcome to SvelteKit</p>
 
-	<section>section</section>
+	<section>
+		<div>
+			<Input />
+		</div>
 
-	<input type="text" placeholder="input text" />
+		<div>
+			<Checkbox />
+		</div>
 
-	<label for="">
-		<input type="checkbox" name="" id="" />
-		<input type="checkbox" name="" id="" />
-		<input type="checkbox" name="" id="" />
-		<input type="checkbox" name="" id="" />
-	</label>
+		<div>
+			<Date />
+		</div>
 
-	<Checkbox />
+		<div>
+			<label for="">
+				<input type="file" name="" id="" />
+			</label>
+		</div>
 
-	<label for="">
-		<input type="date" name="" id="" />
-	</label>
+		<div>
+			<label for="">
+				<input type="radio" name="radio" id="" />
+				<input type="radio" name="radio" id="" />
+				<input type="radio" name="radio" id="" />
+				<input type="radio" name="radio" id="" />
+			</label>
+		</div>
 
-	<label for="">
-		<input type="file" name="" id="" />
-	</label>
+		<div>
+			<select name="" id="">
+				<option value="">Option 1</option>
+				<option value="">Option 2</option>
+				<option value="">Option 3</option>
+				<option value="">Option 4</option>
+			</select>
+		</div>
 
-	<label for="">
-		<input type="radio" name="radio" id="" />
-		<input type="radio" name="radio" id="" />
-		<input type="radio" name="radio" id="" />
-		<input type="radio" name="radio" id="" />
-	</label>
-
-	<select name="" id="">
-		<option value="">Option 1</option>
-		<option value="">Option 2</option>
-		<option value="">Option 3</option>
-		<option value="">Option 4</option>
-	</select>
-
-	<button>button</button>
+		<button>button</button>
+	</section>
 </main>
 
-<style></style>
+<style>
+	section {
+		gap: var(--md);
+	}
+
+	div {
+		width: 100%;
+	}
+</style>

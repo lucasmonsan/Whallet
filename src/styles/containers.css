@@ -1,7 +1,7 @@
 body {
 	font-family: 'Asap', sans-serif;
-	color: var(--color-text1);
-	background-color: var(--color-bg1);
+	color: var(--color-text);
+	background-color: var(--color-bg);
 }
 
 main {
@@ -10,13 +10,16 @@ main {
 	gap: var(--sm);
 	min-height: 100dvh;
 	padding: var(--md);
-	border: solid 2px red;
+	border: var(--border);
+	border-color: var(--red);
 }
 
 section {
+	display: flex;
+	flex-wrap: wrap;
 	min-height: calc(var(--md) * 3);
 	padding: var(--padding-container);
 	border-radius: var(--radius);
 	border: none;
-	background-color: var(--color-bg2);
+	background-color: var(--color-component);
 }

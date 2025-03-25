@@ -1,44 +1,46 @@
-<label class="checkBox">
-	<input id="ch1" type="checkbox" />
-	<div class="transition"></div>
+<label class="container">
+	<input type="checkbox" />
+	<svg viewBox="0 0 64 64">
+		<path
+			d="M 0 16 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 16 L 32 48 L 64 16 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 16"
+			pathLength="575.0541381835938"
+			class="path"
+		></path>
+	</svg>
 </label>
 
 <style>
-	.checkBox {
-		display: block;
+	label {
 		cursor: pointer;
-		width: 30px;
-		height: 30px;
-		border: 3px solid rgba(255, 255, 255, 0);
-		border-radius: 10px;
-		position: relative;
-		overflow: hidden;
-		box-shadow: 0px 0px 0px 2px #fff;
 	}
 
-	.checkBox div {
-		width: 60px;
-		height: 60px;
-		background-color: #fff;
-		top: -52px;
-		left: -52px;
-		position: absolute;
-		transform: rotateZ(45deg);
-		z-index: 100;
+	label input {
+		display: none;
 	}
 
-	.checkBox input[type='checkbox']:checked + div {
-		left: -10px;
-		top: -10px;
+	label svg {
+		overflow: visible;
+		width: var(--xl);
+		height: var(--xl);
 	}
 
-	.checkBox input[type='checkbox'] {
-		position: absolute;
-		left: 50px;
-		visibility: hidden;
+	.path {
+		fill: none;
+		stroke: var(--color-subtext);
+		stroke-width: 6;
+		stroke-linecap: round;
+		stroke-linejoin: round;
+		transition:
+			stroke-dasharray 0.4s ease,
+			stroke-dashoffset 0.4s ease,
+			stroke 0.4s ease;
+		stroke-dasharray: 241 9999999;
+		stroke-dashoffset: 0;
 	}
 
-	.transition {
-		transition: 300ms ease;
+	label input:checked ~ svg .path {
+		stroke-dasharray: 70.5096664428711 9999999;
+		stroke-dashoffset: -262.2723388671875;
+		stroke: var(--color-success); /* Altera a cor do stroke quando o checkbox estiver marcado */
 	}
 </style>
