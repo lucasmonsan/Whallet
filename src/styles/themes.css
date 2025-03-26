@@ -1,12 +1,12 @@
 /* DEFAULT */
 :root {
-	--color-bg: var(--snow);
-	--color-component: var(--white);
+	--color-bg: var(--black1);
+	--color-component: var(--black2);
 
-	--color-text: var(--black);
+	--color-text: var(--white1);
 	--color-subtext: var(--gray);
 
 	--color-error: var(--red);
-	--color-success: var(--green);
-	--color-focus: var(--blue);
+	--color-success: var(--green1);
+	--color-focus: var(--white2);
 }

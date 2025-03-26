@@ -45,8 +45,8 @@
 		padding-bottom: calc(var(--md) * 0.05);
 		right: 0;
 		width: calc(var(--md) * 2.5);
-		height: 100%;
 		padding: 0 var(--xs);
 		background-color: var(--color-component);
+		border: solid 1px red;
 	}
 </style>

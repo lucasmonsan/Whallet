@@ -10,8 +10,6 @@ main {
 	gap: var(--sm);
 	min-height: 100dvh;
 	padding: var(--md);
-	border: var(--border);
-	border-color: var(--red);
 }
 
 section {
@@ -22,4 +20,5 @@ section {
 	border-radius: var(--radius);
 	border: none;
 	background-color: var(--color-component);
+	box-shadow: var(--shadow);
 }

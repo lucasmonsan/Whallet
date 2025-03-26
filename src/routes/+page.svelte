@@ -1,11 +1,14 @@
 <script>
-	import Checkbox from '../components/layouts/Checkbox.svelte';
-	import Date from '../components/layouts/Date.svelte';
-	import Input from '../components/layouts/Input.svelte';
+	import CheckboxInput from '../components/layouts/CheckboxInput.svelte';
+	import DateInput from '../components/layouts/DateInput.svelte';
+	import DefaultInput from '../components/layouts/DefaultInput.svelte';
+	import RadioInput from '../components/layouts/RadioInput.svelte';
+	import SelectInput from '../components/layouts/SelectInput.svelte';
+	import UploadInput from '../components/layouts/UploadInput.svelte';
 </script>
 
 <main>
-	<h1>h1 - Welcome to SvelteKit</h1>
+	<h1>h1 - Welcome to</h1>
 	<h2>h2 - Welcome to SvelteKit</h2>
 	<h3>h3 - Welcome to SvelteKit</h3>
 	<h4>h4 - Welcome to SvelteKit</h4>
@@ -18,39 +21,27 @@
 
 	<section>
 		<div>
-			<Input />
+			<DefaultInput />
 		</div>
 
 		<div>
-			<Checkbox />
+			<CheckboxInput />
 		</div>
 
 		<div>
-			<Date />
+			<DateInput />
 		</div>
 
 		<div>
-			<label for="">
-				<input type="file" name="" id="" />
-			</label>
+			<UploadInput />
 		</div>
 
 		<div>
-			<label for="">
-				<input type="radio" name="radio" id="" />
-				<input type="radio" name="radio" id="" />
-				<input type="radio" name="radio" id="" />
-				<input type="radio" name="radio" id="" />
-			</label>
+			<RadioInput />
 		</div>
 
 		<div>
-			<select name="" id="">
-				<option value="">Option 1</option>
-				<option value="">Option 2</option>
-				<option value="">Option 3</option>
-				<option value="">Option 4</option>
-			</select>
+			<SelectInput />
 		</div>
 
 		<button>button</button>
