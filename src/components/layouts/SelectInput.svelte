@@ -1,28 +1,38 @@
-<label for="select-input">
-	<select name="" id="select-input">
-		<option value="">Option 1</option>
-		<option value="">Option 2</option>
-		<option value="">Option 3</option>
-		<option value="">Option 4</option>
-	</select>
+<script lang="ts">
+	export let ForId: string;
+	export let TriggerGrayout: boolean = false;
+</script>
+
+<label for={ForId}>
+	<input type="checkbox" id={ForId} bind:checked={TriggerGrayout} />
 </label>
+
+{#if TriggerGrayout}
+	<input class="grayout-select" />
+{/if}
 
 <style>
 	label {
 		height: calc(var(--md) * 2.75);
 	}
 
-	label select {
+	input.grayout-select {
+		z-index: var(--z-grayout-1);
+		position: fixed;
+		top: 0;
+		left: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		width: 100%;
 		height: 100%;
-		border: none;
-		outline: none;
-		color: var(--color-subtext);
-		background-color: transparent;
+		padding: var(--md);
+		background-color: rgba(0, 0, 0, 0.75);
+		border: solid 1px blue;
 	}
 
-	label select:focus {
-		color: var(--color-focus);
-		border-color: var(--color-focus);
+	section {
+		width: 100%;
+		background-color: var(--gray);
 	}
 </style>

@@ -1,20 +1,20 @@
 <script lang="ts">
+	export let ForId: string;
+	export let options: string[] = [];
+	export let value: string;
+
+	$: if (options.length > 0 && !value) {
+		value = options[0];
+	}
 </script>
 
-<div class="radio-inputs">
-	<label class="radio">
-		<input type="radio" name="radio" />
-		<p class="name">HTML</p>
-	</label>
-	<label class="radio">
-		<input type="radio" name="radio" />
-		<p class="name">React</p>
-	</label>
-
-	<label class="radio">
-		<input type="radio" name="radio" />
-		<p class="name">Vue</p>
-	</label>
+<div>
+	{#each options as option, index}
+		<label for="{ForId}-{index}">
+			<input type="radio" name={ForId} id="{ForId}-{index}" value={option} bind:group={value} />
+			<p>{option}</p>
+		</label>
+	{/each}
 </div>
 
 <style>
@@ -24,7 +24,7 @@
 		display: flex;
 		align-items: center;
 		flex-wrap: wrap;
-		height: calc(var(--md) * 2.5);
+		height: calc(var(--md) * 2.75);
 	}
 
 	div label {
@@ -34,8 +34,8 @@
 		padding: 0;
 		text-align: center;
 		border-radius: 0;
-		border: 2px solid var(--color-subtext); /* Cor de borda padrão */
-		transition: border-color 0.25s ease-out; /* Transição suave para a cor da borda */
+		border: 2px solid var(--color-subtext);
+		transition: border-color 0.25s ease-out;
 	}
 
 	div label:first-child {
@@ -68,14 +68,12 @@
 			font-weight 0.25s ease-out;
 	}
 
-	/* Quando o input está selecionado, mudamos a cor da borda */
 	div label input:checked + p {
 		color: var(--color-focus);
 		background-color: var(--color-success);
 		font-weight: bold;
 	}
 
-	/* Mudamos a cor da borda quando qualquer radio button estiver selecionado */
 	div label input:checked {
 		border-color: var(--color-text);
 	}

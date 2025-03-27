@@ -10,6 +10,7 @@ main {
 	gap: var(--sm);
 	min-height: 100dvh;
 	padding: var(--md);
+	border: solid 1px red;
 }
 
 section {

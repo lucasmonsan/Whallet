@@ -1,50 +1,46 @@
-<script>
+<script lang="ts">
+	import Button from '../components/layouts/Button.svelte';
 	import CheckboxInput from '../components/layouts/CheckboxInput.svelte';
 	import DateInput from '../components/layouts/DateInput.svelte';
 	import DefaultInput from '../components/layouts/DefaultInput.svelte';
 	import RadioInput from '../components/layouts/RadioInput.svelte';
 	import SelectInput from '../components/layouts/SelectInput.svelte';
 	import UploadInput from '../components/layouts/UploadInput.svelte';
+
+	let radioValue: string;
 </script>
 
 <main>
-	<h1>h1 - Welcome to</h1>
-	<h2>h2 - Welcome to SvelteKit</h2>
-	<h3>h3 - Welcome to SvelteKit</h3>
-	<h4>h4 - Welcome to SvelteKit</h4>
-	<h5>h5 - Welcome to SvelteKit</h5>
-	<h6>h6 - Welcome to SvelteKit</h6>
-
-	<strong>strong - Welcome to SvelteKit</strong>
-
-	<p>p - Welcome to SvelteKit</p>
-
 	<section>
 		<div>
-			<DefaultInput />
+			<DefaultInput ForId="test" Placeholder="Digita qualquer coisa, lek" />
 		</div>
 
 		<div>
-			<CheckboxInput />
+			<CheckboxInput ForId="test2" />
 		</div>
 
 		<div>
-			<DateInput />
+			<DateInput ForId="test3" />
 		</div>
 
 		<div>
-			<UploadInput />
+			<UploadInput ForId="test4" />
 		</div>
 
 		<div>
-			<RadioInput />
+			<RadioInput
+				ForId="test5"
+				options={['Option1', 'Option2', 'Option3']}
+				bind:value={radioValue}
+			/>
 		</div>
 
 		<div>
-			<SelectInput />
+			<SelectInput ForId="test6" />
 		</div>
 
-		<button>button</button>
+		<Button />
 	</section>
 </main>
 

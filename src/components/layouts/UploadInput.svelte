@@ -1,9 +1,13 @@
 <script lang="ts">
+	export let ForId: string;
+	export let Placeholder: string = '';
 </script>
 
-<label for="upload-input">
-	<input type="file" id="upload-input" />
-	<p>Clique p/ adicionar o arquivo</p>
+<label for={ForId}>
+	<input type="file" id={ForId} />
+	{#if Placeholder !== ''}
+		<p>{Placeholder}</p>
+	{/if}
 </label>
 
 <style>

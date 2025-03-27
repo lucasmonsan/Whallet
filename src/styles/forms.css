@@ -25,9 +25,9 @@ label strong {
 	position: absolute;
 	padding: 0 var(--xxs) calc(var(--md) * 0.125);
 	color: var(--color-subtext);
-	font-size: var(--md);
+	font-size: calc(var(--md) * 0.85);
 	background-color: var(--color-component);
-	transform: translateY(calc(var(--base) * -1.4)) scale(0.85);
+	transform: translateY(calc(var(--base) * -1.4));
 	transition:
 		border 0.25s ease-out,
 		color 0.25s ease-in-out;

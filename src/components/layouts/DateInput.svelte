@@ -1,9 +1,13 @@
 <script lang="ts">
+	export let ForId: string;
+	export let Placeholder: string = '';
 </script>
 
-<label for="date-input">
-	<strong>Text Title</strong>
-	<input type="date" id="date-input" />
+<label for={ForId}>
+	{#if Placeholder !== ''}
+		<strong>{Placeholder}</strong>
+	{/if}
+	<input type="date" id={ForId} />
 </label>
 
 <style>
