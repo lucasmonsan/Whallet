@@ -1,15 +1,15 @@
 <script lang="ts">
 	export let ForId: string;
-	export let options: string[] = [];
+	export let Options: string[] = [];
 	export let value: string;
 
-	$: if (options.length > 0 && !value) {
-		value = options[0];
+	$: if (Options.length > 0 && !value) {
+		value = Options[0];
 	}
 </script>
 
 <div>
-	{#each options as option, index}
+	{#each Options as option, index}
 		<label for="{ForId}-{index}">
 			<input type="radio" name={ForId} id="{ForId}-{index}" value={option} bind:group={value} />
 			<p>{option}</p>
@@ -24,28 +24,28 @@
 		display: flex;
 		align-items: center;
 		flex-wrap: wrap;
-		height: calc(var(--md) * 2.75);
+		min-height: calc(var(--md) * 3);
+		border: var(--border) var(--color-subtext);
+		border-radius: var(--radius);
+		overflow: hidden;
 	}
 
 	div label {
 		overflow: hidden;
-		flex: 1 1 auto;
-		height: 100%;
+		flex: 1 0 calc(var(--md) * 5);
+		min-height: 100%;
 		padding: 0;
 		text-align: center;
 		border-radius: 0;
-		border: 2px solid var(--color-subtext);
 		transition: border-color 0.25s ease-out;
 	}
 
 	div label:first-child {
 		border-right: none;
-		border-radius: var(--radius) 0 0 var(--radius);
 	}
 
 	div label:last-child {
 		border-left: none;
-		border-radius: 0 var(--radius) var(--radius) 0;
 	}
 
 	div label input {
@@ -63,9 +63,9 @@
 		color: var(--color-subtext);
 		font-weight: 400;
 		transition:
-			color 0.25s ease-out,
-			background-color 0.25s ease-out,
-			font-weight 0.25s ease-out;
+			color var(--transition),
+			background-color var(--transition),
+			font-weight var(--transition);
 	}
 
 	div label input:checked + p {

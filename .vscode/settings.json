@@ -2,6 +2,7 @@
 	"git.openRepositoryInParentFolders": "always",
 	"window.commandCenter": false,
 	"workbench.layoutControl.enabled": false,
+	"workbench.settings.applyToAllProfiles": ["sync.forceUpload", "sync.autoUpload", "editor.fontFamily", "editor.tabSize", "editor.fontSize", "editor.defaultFormatter", "editor.formatOnSave"],
 	"editor.defaultFormatter": "esbenp.prettier-vscode",
 	"editor.formatOnSave": true,
 
@@ -16,6 +17,7 @@
 	"editor.fontSize": 12,
 	"prettier.printWidth": 240,
 	"editor.linkedEditing": true,
+	"security.workspace.trust.untrustedFiles": "open",
 	"javascript.updateImportsOnFileMove.enabled": "always",
 
 	"editor.lineHeight": 1.8,
@@ -30,7 +32,7 @@
 	"terminal.integrated.defaultProfile.linux": "zsh",
 	"explorer.fileNesting.patterns": {
 		".env": ".npm*, tsconfig*, vite*, .git*, svelte*, README*, LICENSE*, *.css, .prettier*, yarn*, package*, bun*",
-		"package.json": "bun*, .npm*, tsconfig*, vite*, .git*, svelte*, README*, LICENSE*, *.css, .prettier*, eslint*, yarn*, package*, astro*",
+		"package.json": "bun*, .npm*, tsconfig*, vite*, .git*, svelte*, README*, LICENSE*, *.css, .prettier*, yarn*, package*, astro*",
 		"index.html": ".prettier*, eslint*, LICENSE*, package*, README*"
 	},
 	"window.confirmSaveUntitledWorkspace": false,
@@ -43,7 +45,6 @@
 	"files.associations": {
 		"*.tsx": "typescriptreact"
 	},
-
 	"[svelte]": {
 		"editor.defaultFormatter": "svelte.svelte-vscode"
 	},

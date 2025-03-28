@@ -3,14 +3,14 @@ label {
 	position: relative;
 	display: flex;
 	align-items: center;
-	height: calc(var(--base) * 3);
+	height: calc(var(--md) * 3);
 	padding: var(--padding-input);
 	border-radius: var(--radius);
 	border: var(--border);
 	border-color: var(--color-subtext);
 	outline: none;
 	background-color: transparent;
-	transition: border 0.25s ease-in-out;
+	transition: border var(--transition);
 }
 
 label:focus-within {
@@ -27,10 +27,10 @@ label strong {
 	color: var(--color-subtext);
 	font-size: calc(var(--md) * 0.85);
 	background-color: var(--color-component);
-	transform: translateY(calc(var(--base) * -1.4));
+	transform: translateY(calc(var(--md) * -1.4));
 	transition:
-		border 0.25s ease-out,
-		color 0.25s ease-in-out;
+		border var(--transition),
+		color var(--transition);
 }
 
 label input {

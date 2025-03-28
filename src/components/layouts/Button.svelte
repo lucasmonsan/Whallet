@@ -1,5 +1,5 @@
 <script lang="ts">
-	export let Type: 'default' | 'success' | 'error' | 'warning' = 'default';
+	export let Type: 'default' | 'success' | 'error' | 'alert' = 'default';
 </script>
 
 <button class={Type}>
@@ -7,22 +7,45 @@
 </button>
 
 <style>
-	.default {
+	button {
 		cursor: pointer;
 		position: relative;
 		display: flex;
 		align-items: center;
 		width: 100%;
-		height: calc(var(--base) * 3);
+		height: calc(var(--md) * 3);
 		padding: var(--padding-input);
-		color: var(--color-component);
-		border-radius: var(--radius);
 		border: var(--border);
-		border-color: var(--color-subtext);
+		border-radius: var(--sm);
 		text-align: center;
 		outline: none;
-		background-color: var(--color-subtext);
-		transition: border 0.25s ease-in-out;
+		opacity: 0.75;
+		transition: border;
+	}
+
+	.default {
+		color: var(--color-text);
+		border-color: var(--color-template);
+		background-color: var(--color-template);
+	}
+
+	.success {
+		opacity: 1;
+		color: var(--color-text);
+		border-color: var(--color-success);
+		background-color: var(--color-success);
+	}
+
+	.error {
+		color: var(--color-text);
+		border-color: var(--color-error);
+		background-color: var(--color-error);
+	}
+
+	.alert {
+		color: var(--color-text);
+		border-color: var(--color-alert);
+		background-color: var(--color-alert);
 	}
 
 	strong {

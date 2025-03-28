@@ -2,10 +2,12 @@
 :root {
 	--color-bg: var(--black-1);
 	--color-component: var(--black-2);
+	--color-template: var(--black-3);
 
 	--color-text: var(--white-1);
 	--color-subtext: var(--gray);
 
+	--color-alert: var(--orange-2);
 	--color-error: var(--red);
 	--color-success: var(--green-1);
 	--color-focus: var(--white-2);

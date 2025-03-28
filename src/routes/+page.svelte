@@ -7,40 +7,67 @@
 	import SelectInput from '../components/layouts/SelectInput.svelte';
 	import UploadInput from '../components/layouts/UploadInput.svelte';
 
+	let optionsList = ['Option1', 'Option2 political gg', 'Option3', 'Option4', 'Option5'];
 	let radioValue: string;
 </script>
 
 <main>
 	<section>
 		<div>
-			<DefaultInput ForId="test" Placeholder="Digita qualquer coisa, lek" />
+			<SelectInput Placeholder="Dropdown" Options={optionsList} Value={radioValue} />
 		</div>
 
 		<div>
-			<CheckboxInput ForId="test2" />
+			<CheckboxInput ForId="checkbox1" Placeholder="Clica aqui pra dar um like, lek" />
 		</div>
 
 		<div>
-			<DateInput ForId="test3" />
+			<SelectInput Placeholder="Dropdown" Options={optionsList} Value={radioValue} />
 		</div>
 
 		<div>
-			<UploadInput ForId="test4" />
+			<UploadInput ForId="upload1" Placeholder="Clica pra add o arquivo, lek" />
 		</div>
 
 		<div>
-			<RadioInput
-				ForId="test5"
-				options={['Option1', 'Option2', 'Option3']}
-				bind:value={radioValue}
-			/>
+			<SelectInput Placeholder="Dropdown" Options={optionsList} Value={radioValue} />
 		</div>
 
 		<div>
-			<SelectInput ForId="test6" />
+			<RadioInput ForId="radio1" Options={optionsList} value={radioValue} />
 		</div>
 
-		<Button />
+		<div>
+			<SelectInput Placeholder="Dropdown" Options={optionsList} Value={radioValue} />
+		</div>
+
+		<div>
+			<SelectInput Placeholder="Dropdown" Options={optionsList} Value={radioValue} />
+		</div>
+
+		<div>
+			<SelectInput Placeholder="Dropdown" Options={optionsList} Value={radioValue} />
+		</div>
+
+		<div>
+			<SelectInput Placeholder="Dropdown" Options={optionsList} Value={radioValue} />
+		</div>
+
+		<div>
+			<SelectInput Placeholder="Dropdown" Options={optionsList} Value={radioValue} />
+		</div>
+
+		<div>
+			<SelectInput Placeholder="Dropdown" Options={optionsList} Value={radioValue} />
+		</div>
+
+		<div>
+			<SelectInput Placeholder="Dropdown" Options={optionsList} Value={radioValue} />
+		</div>
+
+		<div>
+			<SelectInput Placeholder="Dropdown" Options={optionsList} Value={radioValue} />
+		</div>
 	</section>
 </main>
 
