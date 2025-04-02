@@ -9,28 +9,17 @@
 	--xl: calc(var(--base) * 1.5);
 	--xxl: calc(var(--base) * 1.75);
 
-	--black-1: rgb(0, 0, 0);
-	--black-2: rgb(38, 38, 38);
-	--black-3: rgb(77, 82, 80);
-	--white-1: rgb(255, 255, 255);
-	--white-2: rgb(250, 250, 250);
-	--gray: rgb(165, 165, 165);
-	--red: rgb(249, 65, 68);
-	--orange-1: rgb(243, 114, 44);
-	--orange-2: rgb(248, 150, 30);
-	--yellow: rgb(249, 199, 79);
-	--green-1: rgb(67, 170, 139);
-	--green-2: rgb(112, 207, 171);
-	--blue-1: rgb(87, 117, 144);
-	--blue-2: rgb(39, 125, 161);
-	--purple: rgb(123, 44, 191);
+	--header-h: calc(var(--md) * 3);
+	--footer-h: calc(var(--md) * 3.5);
 
-	--padding-container: var(--md);
+	--padding-main: calc(var(--header-h) + var(--xs)) var(--sm) calc(var(--footer-h) + var(--xs));
+	--padding-section: var(--sm);
 	--padding-input: calc(var(--md) * 0.25) var(--md);
 
 	--border: solid 2px;
 
-	--radius: var(--lg);
+	--radius-1: var(--md);
+	--radius-2: var(--lg);
 
 	--shadow: rgba(97, 97, 97, 0.4) 0px 8px 24px;
 

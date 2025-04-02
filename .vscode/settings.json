@@ -32,7 +32,7 @@
 	"terminal.integrated.defaultProfile.linux": "zsh",
 	"explorer.fileNesting.patterns": {
 		".env": ".npm*, tsconfig*, vite*, .git*, svelte*, README*, LICENSE*, *.css, .prettier*, yarn*, package*, bun*",
-		"package.json": "bun*, .npm*, tsconfig*, vite*, .git*, svelte*, README*, LICENSE*, *.css, .prettier*, yarn*, package*, astro*",
+		"package.json": "bun*, .npm*, tsconfig*, vite*, .git*, svelte*, README*, LICENSE*, *.css, eslint*, .prettier*, yarn*, package*, astro*",
 		"index.html": ".prettier*, eslint*, LICENSE*, package*, README*"
 	},
 	"window.confirmSaveUntitledWorkspace": false,
