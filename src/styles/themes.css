@@ -11,4 +11,6 @@
 	--color-error: var(--light-red);
 	--color-success: var(--dark-green);
 	--color-focus: var(--white);
+
+	--color-app: var(--dark-aqua);
 }

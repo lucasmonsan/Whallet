@@ -1,0 +1,3 @@
+Welcome bg {
+  Image by <a href="https://pixabay.com/users/ray_shrewsberry-7673058/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8610616">Ray Shrewsberry • Ray_Shrewsberry</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8610616">Pixabay</a>
+}

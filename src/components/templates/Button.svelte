@@ -3,7 +3,7 @@
 </script>
 
 <button class={Type}>
-	<strong>Button text</strong>
+	<strong><slot /></strong>
 </button>
 
 <style>

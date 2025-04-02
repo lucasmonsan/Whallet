@@ -21,12 +21,14 @@
 	--radius-1: var(--md);
 	--radius-2: var(--lg);
 
-	--shadow: rgba(97, 97, 97, 0.4) 0px 8px 24px;
+	--shadow-component: rgba(97, 97, 97, 0.4) 0px 8px 24px;
+	--shadow-dark-aqua: rgba(59, 174, 218, 0.8) 0 0 12px;
 
 	--transition: 0.25s ease-in-out;
 
 	--z-base: 1;
-	--z-grayout: 8;
-	--z-popup: 9;
+	--z-grayout: 7;
+	--z-popup: 8;
+	--z-splash: 9;
 	--z-backout: 10;
 }
