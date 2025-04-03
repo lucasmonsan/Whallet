@@ -1,6 +1,7 @@
 <script lang="ts">
 	import '../styles/global.css';
 	import { onMount } from 'svelte';
+	import { onNavigate } from '$app/navigation';
 	import Footer from '../components/templates/Footer.svelte';
 	import Header from '../components/templates/Header.svelte';
 	import Splash from '../components/layouts/Splash.svelte';
@@ -12,6 +13,11 @@
 	onMount(() => {
 		splashTrigger = true;
 		setTimeout(() => (splashTrigger = false), 3000);
+	});
+
+	onNavigate(() => {
+		if (!document.startViewTransition) return; // @ts-ignore
+		return new Promise<void>((res) => document.startViewTransition(() => new Promise(res)));
 	});
 
 	// onMount(() => {

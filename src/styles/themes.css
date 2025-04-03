@@ -4,13 +4,14 @@
 	--color-component: var(--dark);
 	--color-template: var(--gray);
 
-	--color-text: var(--white);
-	--color-subtext: var(--light);
+	--color-title: var(--white);
+	--color-text: var(--light);
+	--color-subtext: var(--silver);
 
 	--color-alert: var(--light-orange);
 	--color-error: var(--light-red);
 	--color-success: var(--dark-green);
 	--color-focus: var(--white);
 
-	--color-app: var(--dark-aqua);
+	--color-app: var(--dark-blue);
 }

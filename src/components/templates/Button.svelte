@@ -1,8 +1,11 @@
 <script lang="ts">
-	export let Type: 'default' | 'success' | 'error' | 'alert' = 'default';
+	import { goto } from '$app/navigation';
+
+	export let Type: 'default' | 'success' | 'error' | 'alert' | '' = '';
+	export let GoTo: string = '';
 </script>
 
-<button class={Type}>
+<button class={Type} on:click={() => goto(GoTo)}>
 	<strong><slot /></strong>
 </button>
 
@@ -16,17 +19,20 @@
 		height: calc(var(--md) * 3);
 		padding: var(--padding-input);
 		border: var(--border);
-		border-radius: var(--sm);
+		border-radius: var(--radius-2);
 		text-align: center;
+		font-size: calc(var(--md) * 0.95);
 		outline: none;
-		opacity: 0.75;
+		color: var(--color-subtext);
+		background-color: transparent;
+		box-shadow: var(--shadow-component);
 		transition: border;
 	}
 
 	.default {
 		color: var(--color-text);
-		border-color: var(--color-template);
-		background-color: var(--color-template);
+		border-color: var(--color-app);
+		background-color: var(--color-app);
 	}
 
 	.success {

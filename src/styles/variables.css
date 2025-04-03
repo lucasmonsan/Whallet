@@ -21,8 +21,9 @@
 	--radius-1: var(--md);
 	--radius-2: var(--lg);
 
-	--shadow-component: rgba(97, 97, 97, 0.4) 0px 8px 24px;
+	--shadow-component: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
 	--shadow-dark-aqua: rgba(59, 174, 218, 0.8) 0 0 12px;
+	--shadow-text: 1px 1px 2px rgba(0, 0, 0, 0.4);
 
 	--transition: 0.25s ease-in-out;
 

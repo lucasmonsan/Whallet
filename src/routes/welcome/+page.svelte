@@ -1,31 +1,35 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
 	import welcome_bg from '../../assets/images/welcome_bg.webp';
 	import Button from '../../components/templates/Button.svelte';
+	import PageContainer from '../../components/templates/PageContainer.svelte';
+
+	let welcomeTrigger = false;
+
+	onMount(() => (welcomeTrigger = true));
 </script>
 
-<main>
-	<img src={welcome_bg} alt="Imagem de background da tela de boas vindas." />
+{#if welcomeTrigger}
+	<PageContainer Style="padding: var(--lg) var(--sm);">
+		<img src={welcome_bg} alt="Imagem de background da tela de boas vindas." />
 
-	<div class="top">
-		<h2>Olá! Esse é o</h2>
-		<h1>Whallet!</h1>
-	</div>
+		<div class="top">
+			<h2>Olá! Esse é o</h2>
+			<h1>Whallet!</h1>
+		</div>
 
-	<div class="center">
-		<h4>Um aplicativo criado para organizar suas finanças e organizar suas criações financeiras por aplicações de financeirizações criativas.</h4>
-	</div>
+		<div class="center">
+			<h4>Um aplicativo criado para organizar suas finanças e organizar suas criações financeiras por aplicações de financeirizações criativas.</h4>
+		</div>
 
-	<div class="bottom">
-		<Button>Conheça o Whallet!</Button>
-		<Button Type="success">Fazer Login</Button>
-	</div>
-</main>
+		<div class="bottom">
+			<Button>Conheça o Whallet!</Button>
+			<Button Type="default" GoTo="/login">Entrar / Cadastrar</Button>
+		</div>
+	</PageContainer>
+{/if}
 
 <style>
-	main {
-		padding: var(--xl) var(--sm);
-	}
-
 	img {
 		z-index: 1;
 		position: fixed;
@@ -49,6 +53,15 @@
 		justify-content: center;
 		gap: var(--xs);
 		margin-top: var(--xxs);
+	}
+
+	h1 {
+		font-size: calc(var(--md) * 3);
+		line-height: calc(var(--md) * 2.75);
+	}
+
+	h2 {
+		font-size: var(--md);
 	}
 
 	h4 {

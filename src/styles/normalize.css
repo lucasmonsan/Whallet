@@ -13,6 +13,9 @@ html {
 
 body {
 	margin: 0;
+	font-family: 'Asap', sans-serif;
+	color: var(--color-text);
+	background-color: var(--color-bg);
 }
 
 b,

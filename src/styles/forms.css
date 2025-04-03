@@ -5,7 +5,7 @@ label {
 	align-items: center;
 	height: calc(var(--md) * 3);
 	padding: var(--padding-input);
-	border-radius: var(--radius);
+	border-radius: var(--radius-1);
 	border: var(--border);
 	border-color: var(--color-subtext);
 	outline: none;
@@ -26,7 +26,7 @@ label strong {
 	padding: 0 var(--xxs) calc(var(--md) * 0.125);
 	color: var(--color-subtext);
 	font-size: calc(var(--md) * 0.85);
-	background-color: var(--color-component);
+	background-color: var(--color-bg);
 	transform: translateY(calc(var(--md) * -1.4));
 	transition:
 		border var(--transition),
@@ -40,5 +40,5 @@ label input {
 	outline: none;
 	color: var(--color-text);
 	font-size: var(--lg);
-	background-color: var(--color-component);
+	background-color: transparent;
 }

@@ -7,7 +7,7 @@
 
 <style>
 	svg {
-		height: calc(var(--md) * 8);
+		height: calc(var(--md) * 7);
 		fill: var(--color-app);
 	}
 </style>

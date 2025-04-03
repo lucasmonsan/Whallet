@@ -20,4 +20,5 @@ h6,
 strong,
 p {
 	margin: 0;
+	text-shadow: var(--shadow-text);
 }
