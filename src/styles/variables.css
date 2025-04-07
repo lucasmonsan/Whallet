@@ -14,7 +14,7 @@
 
 	--padding-main: calc(var(--header-h) + var(--xs)) var(--sm) calc(var(--footer-h) + var(--xs));
 	--padding-section: var(--sm);
-	--padding-input: calc(var(--md) * 0.25) var(--md);
+	--padding-input: calc(var(--md) * 0.25) var(--sm);
 
 	--border: solid 2px;
 

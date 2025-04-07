@@ -3,7 +3,7 @@
 	import Button from '../../components/templates/Button.svelte';
 	import PageContainer from '../../components/templates/PageContainer.svelte';
 	import LogoIcon from '../../components/icons/LogoIcon.svelte';
-	import TextInput from './../../components/templates/TextInput.svelte';
+	import TextInput from '../../components/templates/TextInput.svelte';
 	import CheckboxInput from '../../components/templates/CheckboxInput.svelte';
 	import GoogleIcon from '../../components/icons/GoogleIcon.svelte';
 	import FacebookIcon from '../../components/icons/FacebookIcon.svelte';
@@ -18,13 +18,15 @@
 	<PageContainer Style="padding: var(--lg) var(--sm); align-items: center; justify-content: center;">
 		<LogoIcon style="max-width: calc(var(--md) * 7); height: calc(var(--md) * 7);" />
 
-		<h2>Entre na sua Conta</h2>
+		<h2>Criar uma Nova Conta</h2>
 
 		<form action="">
-			<TextInput type="email" id="user_email" placeholder="E-mail" />
-			<TextInput type="password" id="password_login" placeholder="Senha" />
-			<CheckboxInput id="remember-login" placeholder="Lembrar email e senha" />
-			<Button type="default" GoTo="/home">Entrar</Button>
+			<TextInput type="text" id="register_name" placeholder="Nome Completo" />
+			<TextInput type="email" id="register_email" placeholder="E-mail" />
+			<TextInput type="password" id="register_password" placeholder="Digite a Senha" />
+			<TextInput type="password" id="register_password2" placeholder="Repetir a Senha" />
+			<CheckboxInput id="remember-login" placeholder="Aceito os Termos de Uso" />
+			<Button type="default">Criar Conta</Button>
 		</form>
 
 		<div class="top">
@@ -34,20 +36,20 @@
 		</div>
 
 		<div class="center">
-			<Button GoTo="/home">
+			<Button>
 				<FacebookIcon />
 			</Button>
-			<Button GoTo="/home">
+			<Button>
 				<GoogleIcon />
 			</Button>
-			<Button GoTo="/home">
+			<Button>
 				<GithubIcon />
 			</Button>
 		</div>
 
-		<Button type="transparent" GoTo="/signup">
-			<h5 class="normal">Não tem conta?</h5>
-			<h5 class="bold">Crie uma Agora!</h5>
+		<Button type="transparent" GoTo="/login">
+			<h5 class="normal">Já tem conta?</h5>
+			<h5 class="bold">Faça Login!</h5>
 		</Button>
 	</PageContainer>
 {/if}

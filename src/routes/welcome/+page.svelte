@@ -24,7 +24,7 @@
 
 		<div class="bottom">
 			<Button>Conheça o Whallet!</Button>
-			<Button Type="default" GoTo="/login">Entrar / Cadastrar</Button>
+			<Button type="default" GoTo="/login">Entrar / Cadastrar</Button>
 		</div>
 	</PageContainer>
 {/if}

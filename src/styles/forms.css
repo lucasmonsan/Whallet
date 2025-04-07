@@ -3,6 +3,7 @@ label {
 	position: relative;
 	display: flex;
 	align-items: center;
+	width: 100%;
 	height: calc(var(--md) * 3);
 	padding: var(--padding-input);
 	border-radius: var(--radius-1);
@@ -27,7 +28,7 @@ label strong {
 	color: var(--color-subtext);
 	font-size: calc(var(--md) * 0.85);
 	background-color: var(--color-bg);
-	transform: translateY(calc(var(--md) * -1.4));
+	transform: translate(var(--xxs), calc(var(--md) * -1.4));
 	transition:
 		border var(--transition),
 		color var(--transition);
@@ -39,6 +40,6 @@ label input {
 	border: none;
 	outline: none;
 	color: var(--color-text);
-	font-size: var(--lg);
+	font-size: var(--md);
 	background-color: transparent;
 }

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import '../styles/global.css';
+	import '../app.css';
 	import { onMount } from 'svelte';
 	import { onNavigate } from '$app/navigation';
 	import Footer from '../components/templates/Footer.svelte';

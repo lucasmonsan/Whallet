@@ -21,4 +21,5 @@ strong,
 p {
 	margin: 0;
 	text-shadow: var(--shadow-text);
+	transition: color var(--transition);
 }

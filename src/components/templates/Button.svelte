@@ -1,12 +1,12 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
 
-	export let Type: 'default' | 'success' | 'error' | 'alert' | '' = '';
+	export let type: 'default' | 'success' | 'error' | 'alert' | 'transparent' | '' = '';
 	export let GoTo: string = '';
 </script>
 
-<button class={Type} on:click={() => goto(GoTo)}>
-	<strong><slot /></strong>
+<button class={type} on:click={() => goto(GoTo)}>
+	<slot />
 </button>
 
 <style>
@@ -15,15 +15,18 @@
 		position: relative;
 		display: flex;
 		align-items: center;
+		justify-content: center;
 		width: 100%;
 		height: calc(var(--md) * 3);
-		padding: var(--padding-input);
+		padding: var(--xs);
 		border: var(--border);
 		border-radius: var(--radius-2);
 		text-align: center;
 		font-size: calc(var(--md) * 0.95);
+		font-weight: 600;
+		text-shadow: var(--shadow-text);
 		outline: none;
-		color: var(--color-subtext);
+		color: var(--color-text);
 		background-color: transparent;
 		box-shadow: var(--shadow-component);
 		transition: border;
@@ -54,9 +57,10 @@
 		background-color: var(--color-alert);
 	}
 
-	strong {
-		width: 100%;
+	.transparent {
+		width: auto;
+		height: auto;
 		padding: 0;
-		text-align: center;
+		border: none;
 	}
 </style>

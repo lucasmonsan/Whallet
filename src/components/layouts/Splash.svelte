@@ -6,7 +6,7 @@
 
 <div class="bg" out:fade>
 	<div class="items" in:fade>
-		<LogoIcon />
+		<LogoIcon style="max-width: calc(var(--md) * 7); height: calc(var(--md) * 7);" />
 		<h2>Whallet!</h2>
 		<Loading />
 	</div>

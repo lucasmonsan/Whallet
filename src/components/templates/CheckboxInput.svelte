@@ -1,24 +1,23 @@
 <script lang="ts">
-	export let ForId: string;
-	export let Placeholder: string = '';
+	export let id: string;
+	export let placeholder: string = '';
 </script>
 
-<label for={ForId}>
-	<input type="checkbox" id={ForId} />
+<label for={id}>
+	<input type="checkbox" {id} />
 	<svg viewBox="0 0 64 64">
-		<path
-			d="M 0 16 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 16 L 32 48 L 64 16 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 16"
-			pathLength="575.0541381835938"
-		/>
+		<path d="M 0 16 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 16 L 32 48 L 64 16 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 16" pathLength="575.0541381835938" />
 	</svg>
-	{#if Placeholder !== ''}
-		<p>{Placeholder}</p>
+	{#if placeholder !== ''}
+		<p>{placeholder}</p>
 	{/if}
 </label>
 
 <style>
 	label {
+		width: auto;
 		height: auto;
+		padding: 0;
 		border: none;
 	}
 
@@ -28,8 +27,8 @@
 
 	label svg {
 		overflow: visible;
-		width: var(--lg);
-		height: var(--lg);
+		width: var(--md);
+		height: var(--md);
 	}
 
 	path {
@@ -52,9 +51,15 @@
 		stroke: var(--color-success);
 	}
 
+	label input:checked ~ p {
+		color: var(--color-success);
+	}
+
 	label p {
 		padding-left: var(--xs);
+		font-size: var(--sm);
 		font-weight: 600;
+		line-height: var(--xs);
 		color: var(--color-subtext);
 	}
 </style>
